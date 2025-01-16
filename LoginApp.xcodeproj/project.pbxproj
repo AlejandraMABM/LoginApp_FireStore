@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1ECCC6C82D396671003B1332 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1ECCC6C72D396671003B1332 /* FirebaseAnalytics */; };
+		1ECCC6CA2D396671003B1332 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 1ECCC6C92D396671003B1332 /* FirebaseAppCheck */; };
+		1ECCC6CC2D396671003B1332 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1ECCC6CB2D396671003B1332 /* FirebaseAuth */; };
+		1ECCC6CE2D396671003B1332 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1ECCC6CD2D396671003B1332 /* FirebaseCore */; };
+		1ECCC6D02D396671003B1332 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1ECCC6CF2D396671003B1332 /* FirebaseCrashlytics */; };
+		1ECCC6D22D396671003B1332 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1ECCC6D12D396671003B1332 /* FirebaseFirestore */; };
+		1ECCC6D42D396671003B1332 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1ECCC6D32D396671003B1332 /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1E6CA6102D36B9830093E491 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +46,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECCC6CA2D396671003B1332 /* FirebaseAppCheck in Frameworks */,
+				1ECCC6CC2D396671003B1332 /* FirebaseAuth in Frameworks */,
+				1ECCC6D02D396671003B1332 /* FirebaseCrashlytics in Frameworks */,
+				1ECCC6CE2D396671003B1332 /* FirebaseCore in Frameworks */,
+				1ECCC6D42D396671003B1332 /* FirebaseStorage in Frameworks */,
+				1ECCC6C82D396671003B1332 /* FirebaseAnalytics in Frameworks */,
+				1ECCC6D22D396671003B1332 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +94,6 @@
 				1E6CA6122D36B9830093E491 /* LoginApp */,
 			);
 			name = LoginApp;
-			packageProductDependencies = (
-			);
 			productName = LoginApp;
 			productReference = 1E6CA6102D36B9830093E491 /* LoginApp.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +122,9 @@
 			);
 			mainGroup = 1E6CA6072D36B9830093E491;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1ECCC6C62D396671003B1332 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1E6CA6112D36B9830093E491 /* Products */;
 			projectDirPath = "";
@@ -153,6 +171,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -181,6 +200,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +355,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1ECCC6C62D396671003B1332 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1ECCC6C72D396671003B1332 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ECCC6C62D396671003B1332 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		1ECCC6C92D396671003B1332 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ECCC6C62D396671003B1332 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		1ECCC6CB2D396671003B1332 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ECCC6C62D396671003B1332 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1ECCC6CD2D396671003B1332 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ECCC6C62D396671003B1332 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		1ECCC6CF2D396671003B1332 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ECCC6C62D396671003B1332 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		1ECCC6D12D396671003B1332 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ECCC6C62D396671003B1332 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		1ECCC6D32D396671003B1332 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ECCC6C62D396671003B1332 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E6CA6082D36B9830093E491 /* Project object */;
 }
