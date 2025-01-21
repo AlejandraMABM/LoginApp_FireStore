@@ -7,6 +7,8 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseCore
+import GoogleSignIn
 
 class SignInViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
@@ -16,7 +18,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     
     @IBAction func signIn(_ sender: Any) {
         Auth.auth().signIn(withEmail: usernameTextField.text!,  password:passwordTextField.text!) { [unowned self] authResult, error in
@@ -37,6 +39,34 @@ class SignInViewController: UIViewController {
                 
             }
         }
+    }
+    
+   
+   
+        @IBAction func googleSignIn(_ sender: Any) {
+            
+            // Start the sign in flow!
+            GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+                guard error == nil else {
+                    return
+                }
+                
+                guard let user = result?.user, let idToken = user.idToken?.tokenString else {
+                    return
+                }
+                
+                let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+                
+                Auth.auth().signIn(with: credential) { result, error in
+                    guard error == nil else {
+                        return
+                    }
+                    
+                    // at this point , our user is signed in
+                    self.performSegue(withIdentifier: "goToHome", sender: nil)
+                }
+            }
+        
     }
 }
 
