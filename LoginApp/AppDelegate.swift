@@ -17,19 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        
-        //configure  google Sigin with firebase
-        
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return true}
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
         return true
+    
+    }
+        
+        func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+            return GIDSignIn.sharedInstance.handle(url)
+          
+        
     }
     
-    func application(_ app: UIApplication,open url: URL,
-        options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-      return GIDSignIn.sharedInstance.handle(url)
-    }
+  
 
     // MARK: UISceneSession Lifecycle
 
