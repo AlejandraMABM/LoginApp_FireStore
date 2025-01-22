@@ -23,7 +23,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		1E6CA6222D36B9840093E491 /* Exceptions for "LoginApp" folder in "LoginApp" target */ = {
+		1ED02B772D417AEA00D5025E /* Exceptions for "LoginApp" folder in "LoginApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -33,10 +33,10 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		1E6CA6122D36B9830093E491 /* LoginApp */ = {
+		1ED02B6D2D417AEA00D5025E /* LoginApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				1E6CA6222D36B9840093E491 /* Exceptions for "LoginApp" folder in "LoginApp" target */,
+				1ED02B772D417AEA00D5025E /* Exceptions for "LoginApp" folder in "LoginApp" target */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -66,7 +66,7 @@
 		1E6CA6072D36B9830093E491 = {
 			isa = PBXGroup;
 			children = (
-				1E6CA6122D36B9830093E491 /* LoginApp */,
+				1ED02B6D2D417AEA00D5025E /* LoginApp */,
 				1E6CA6112D36B9830093E491 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,7 +95,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				1E6CA6122D36B9830093E491 /* LoginApp */,
+				1ED02B6D2D417AEA00D5025E /* LoginApp */,
 			);
 			name = LoginApp;
 			productName = LoginApp;

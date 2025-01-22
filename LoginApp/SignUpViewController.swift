@@ -56,13 +56,46 @@ class SignUpViewController: UIViewController {
                 } else {
                     // Todo correcto
                     print("User signs up successfully")
+                    self.createUser()
                    
                 }
             }
         }
     }
     
-   
+    func createUser() {
+        let userID = Auth.auth().currentUser!.uid
+        let username = usernameTextField.text!
+        //let password = passwordTextField.text!
+        let firstName = firstNameTextField.text!
+        let lastName = lastNameTextField.text!
+        let birthday = dateOfBirthDatePicker.date
+        let gender = switch genderSegmentedControl.selectedSegmentIndex {
+        case 0:
+            Gender.male
+        case 1:
+            Gender.female
+        default:
+            Gender.other
+        }
+        
+        let user = User(id: userID, username: username, firstName: firstName, lastName: lastName, gender: gender, birthday: birthday, provider: .basic, profileImageUrl: nil)
+        
+        let db = Firestore.firestore()
+        do {
+            try db.collection("Users").document(userID).setData(from: user)
+            
+            let alertController = UIAlertController(title: "Create user", message: "User created successfully", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                self.performSegue(withIdentifier: "navigateToEmailVerification", sender: self)
+            }))
+            
+            self.present(alertController, animated: true, completion: nil)
+        } catch let error {
+            print("Error writing user to Firestore: \(error)")
+        }
+    }
     
     func validateData() -> Bool {
         if firstNameTextField.text!.isEmpty {
