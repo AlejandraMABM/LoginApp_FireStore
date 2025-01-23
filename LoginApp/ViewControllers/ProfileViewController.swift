@@ -101,6 +101,17 @@ class ProfileViewController: UIViewController {
         
     }
     
+    
+    
+    @IBAction func cerraSesion(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+        
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 

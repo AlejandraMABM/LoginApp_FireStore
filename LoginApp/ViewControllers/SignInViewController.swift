@@ -17,6 +17,10 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if Auth.auth().currentUser != nil {
+            goToHome()
+        }
     }
     
     @IBAction func forgotPassword(_ sender: Any) {
@@ -46,7 +50,7 @@ class SignInViewController: UIViewController {
                 
             } else {
                 print("User signs up successfully")
-                self.performSegue(withIdentifier: "goToHome", sender:nil)
+                goToHome()
                 
                 
             }
@@ -82,10 +86,14 @@ class SignInViewController: UIViewController {
                     }
                     
                     // at this point , our user is signed in
-                    self.performSegue(withIdentifier: "goToHome", sender: nil)
+                    goToHome()
                 }
             }
         
+    }
+    
+    func goToHome() {
+        self.performSegue(withIdentifier: "goToHome", sender: nil)
     }
 }
 

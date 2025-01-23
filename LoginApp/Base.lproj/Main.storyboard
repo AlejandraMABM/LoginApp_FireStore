@@ -332,17 +332,6 @@
                                 <rect key="frame" x="131" y="103" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbW-dV-JNQ">
-                                <rect key="frame" x="154" y="644" width="86" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
-                                <connections>
-                                    <action selector="createUser:" destination="f9j-ys-fpR" eventType="touchUpInside" id="XRB-gD-mPn"/>
-                                    <action selector="saveUser:" destination="fqi-0L-qXe" eventType="touchUpInside" id="tgy-hI-Dhd"/>
-                                    <segue destination="fqi-0L-qXe" kind="show" id="VRb-Eb-z8d"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información básica:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bV-iT-lkL">
                                 <rect key="frame" x="8" y="241" width="377" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -402,6 +391,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9W-1V-8I5">
+                                <rect key="frame" x="210" y="646" width="128" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cerrar Sesiòn"/>
+                                <connections>
+                                    <action selector="cerraSesion:" destination="fqi-0L-qXe" eventType="touchUpInside" id="8Oy-dh-tEN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbW-dV-JNQ">
+                                <rect key="frame" x="48" y="646" width="86" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
+                                <connections>
+                                    <action selector="saveUser:" destination="fqi-0L-qXe" eventType="touchUpInside" id="tgy-hI-Dhd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pca-N1-ImH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -409,17 +416,34 @@
                     <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" selectedImage="person.fill" id="Oan-kd-psD"/>
                     <connections>
                         <outlet property="apellidoTextField" destination="liT-Zw-aiS" id="9Qk-At-dEX"/>
+                        <outlet property="cerrarSesion" destination="H9W-1V-8I5" id="ubo-bt-YB5"/>
                         <outlet property="dateOfBirthLabel" destination="aBz-9i-yCR" id="5r5-vy-Vwz"/>
                         <outlet property="genderTextField" destination="QY3-vu-v2W" id="mYl-bQ-Cz8"/>
                         <outlet property="nameTextField" destination="7ed-eG-ZvJ" id="zlI-dw-rhe"/>
                         <outlet property="profileImageView" destination="aVy-RK-iP2" id="uud-0f-TTG"/>
-                        <outlet property="saveUser" destination="AKX-2X-DwP" id="n6J-oM-N6K"/>
+                        <outlet property="saveUser" destination="RbW-dV-JNQ" id="waz-nf-350"/>
                         <outlet property="userNameTextField" destination="qcU-i1-BQs" id="Zge-SU-ZXR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIx-FR-qab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="1449"/>
+            <point key="canvasLocation" x="427" y="1479"/>
+        </scene>
+        <!--Ajustes-->
+        <scene sceneID="XbA-w5-bMP">
+            <objects>
+                <viewController id="t3w-mf-Qxz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="95i-VQ-zOc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="U7y-wI-Kyh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="FZ4-ty-Gx2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72d-js-TmT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1576" y="1479"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QTs-R4-lWW">
@@ -433,6 +457,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="fqi-0L-qXe" kind="relationship" relationship="viewControllers" id="hqy-Xw-vMI"/>
+                        <segue destination="t3w-mf-Qxz" kind="relationship" relationship="viewControllers" id="LQh-Jb-VHo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F0r-2K-LlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -500,6 +525,8 @@
         <segue reference="mga-fn-slT"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="genderIcon-male" width="80" height="80"/>
         <image name="logo-placeholder" width="200" height="200"/>
         <image name="person" catalog="system" width="128" height="121"/>
