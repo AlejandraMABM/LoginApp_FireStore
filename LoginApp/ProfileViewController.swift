@@ -16,7 +16,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var apellidoTextField: UITextField!
     
     @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet var genderLabel: UIView!
+    
+    @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var dateOfBirthLabel: UILabel!
     
     var user:User!
@@ -47,9 +48,32 @@ class ProfileViewController: UIViewController {
     func loadData() {
         
         nameTextField.text = user.firstName
-        
         apellidoTextField.text = user.lastName
+        
         userNameTextField.text = user.username
+        
+        switch user.gender {
+        case .male:
+            genderTextField.text = "Hombre"
+           
+        case .female:
+            genderTextField.text = "Mujer"
+           
+        case .other:
+            genderTextField.text = "Otro"
+    
+        default:
+            genderTextField.text = "Indefinido"
+           
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        if let date = user.birthday {
+            dateOfBirthLabel.text = formatter.string(from: date)
+        } else {
+            dateOfBirthLabel.text = "--/--/----"
+        }
         
         
         
