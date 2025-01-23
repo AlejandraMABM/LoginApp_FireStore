@@ -339,6 +339,8 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
                                 <connections>
                                     <action selector="createUser:" destination="f9j-ys-fpR" eventType="touchUpInside" id="XRB-gD-mPn"/>
+                                    <action selector="saveUser:" destination="fqi-0L-qXe" eventType="touchUpInside" id="tgy-hI-Dhd"/>
+                                    <segue destination="fqi-0L-qXe" kind="show" id="VRb-Eb-z8d"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información básica:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bV-iT-lkL">
@@ -411,6 +413,7 @@
                         <outlet property="genderTextField" destination="QY3-vu-v2W" id="mYl-bQ-Cz8"/>
                         <outlet property="nameTextField" destination="7ed-eG-ZvJ" id="zlI-dw-rhe"/>
                         <outlet property="profileImageView" destination="aVy-RK-iP2" id="uud-0f-TTG"/>
+                        <outlet property="saveUser" destination="AKX-2X-DwP" id="n6J-oM-N6K"/>
                         <outlet property="userNameTextField" destination="qcU-i1-BQs" id="Zge-SU-ZXR"/>
                     </connections>
                 </viewController>

@@ -75,11 +75,32 @@ class ProfileViewController: UIViewController {
             dateOfBirthLabel.text = "--/--/----"
         }
         
-        
+        if let imageUrl = user.profileImageUrl {
+            profileImageView.loadFrom(url: imageUrl)
+        }
         
     }
     
 
+    @IBAction func saveUser(_ sender: Any) {
+        let userID = Auth.auth().currentUser!.uid
+        let username = userNameTextField.text!
+        //let password = passwordTextField.text!
+        let firstName = nameTextField.text!
+        let lastName = apellidoTextField.text!
+        let birthday = dateOfBirthLabel.text!
+        let gender = genderTextField.text!
+        
+        let db = Firestore.firestore()
+        
+        do {
+            try db.collection("Users").document(userID).setData(from: user)
+        } catch let error {
+            print ("Error writing user to Firestone: \(error)")
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
