@@ -88,8 +88,13 @@ class ProfileViewController: UIViewController {
         //let password = passwordTextField.text!
         let firstName = nameTextField.text!
         let lastName = apellidoTextField.text!
+        
+        // modificar estas variables, el gender debe ser de tipo control y el cumpleaños debe modificarse
         let birthday = dateOfBirthLabel.text!
         let gender = genderTextField.text!
+        
+        user.firstName = firstName
+        user.lastName = lastName
         
         let db = Firestore.firestore()
         

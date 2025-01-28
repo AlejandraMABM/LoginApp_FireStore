@@ -416,12 +416,10 @@
                     <tabBarItem key="tabBarItem" title="Perfil" image="person" catalog="system" selectedImage="person.fill" id="Oan-kd-psD"/>
                     <connections>
                         <outlet property="apellidoTextField" destination="liT-Zw-aiS" id="9Qk-At-dEX"/>
-                        <outlet property="cerrarSesion" destination="H9W-1V-8I5" id="ubo-bt-YB5"/>
                         <outlet property="dateOfBirthLabel" destination="aBz-9i-yCR" id="5r5-vy-Vwz"/>
                         <outlet property="genderTextField" destination="QY3-vu-v2W" id="mYl-bQ-Cz8"/>
                         <outlet property="nameTextField" destination="7ed-eG-ZvJ" id="zlI-dw-rhe"/>
                         <outlet property="profileImageView" destination="aVy-RK-iP2" id="uud-0f-TTG"/>
-                        <outlet property="saveUser" destination="RbW-dV-JNQ" id="waz-nf-350"/>
                         <outlet property="userNameTextField" destination="qcU-i1-BQs" id="Zge-SU-ZXR"/>
                     </connections>
                 </viewController>
